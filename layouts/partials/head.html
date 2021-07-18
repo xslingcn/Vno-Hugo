@@ -9,24 +9,16 @@
     <!-- SEO -->
     {{ if and (.IsHome) (.Site.Title) }}
     <title>{{ .Site.Title }} - {{ .Site.Params.subTitle }}</title>
-    <meta name="twitter:title" content="{{ .Site.Title }} - {{ .Site.Params.subTitle }}">
-    <meta property="og:title" content="{{ .Site.Title }} - {{ .Site.Params.subTitle }}">
     {{ else if .IsHome }}
     <title>{{ .Site.Title }}</title>
-    <meta name="twitter:title" content="{{ .Site.Title }}">
-    <meta property="og:title" content="{{ .Site.Title }}">
     {{ else }}
     <title>{{ .Title }} - {{ .Site.Title }}</title>
-    <meta name="twitter:title" content="{{ .Title }} - {{ .Site.Title }}">
-    <meta property="og:title" content="{{ .Title }} - {{ .Site.Title }}">
     {{ end }}
     {{ if or (.Params.author) (.Site.Params.author) }}
     <meta name="author" content="{{ if .Params.author }}{{ .Params.author }}{{ else }}{{ .Site.Params.author }}{{ end }}" /> 
     {{ end }} 
     {{ if or (.Params.description) (.Site.Params.description) }}
     <meta name="description" content="{{ if .Params.description }}{{ .Params.description }}{{ else }}{{ .Site.Params.description }}{{ end }}" /> 
-    <meta name="twitter:description" content="{{ if .Params.description }}{{ .Params.description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
-    <meta property="og:description" content="{{ if .Params.description }}{{ .Params.description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
     {{ end }}
     {{ if .Params.tags }}
     <meta name="keywords" content="{{ delimit .Params.tags ", " }}" />
@@ -34,8 +26,8 @@
     {{ with .OutputFormats.Get "rss" -}}
     {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}         
     {{ end -}}
-    <meta name="twitter:card" content="summary">
-    <meta property="og:type" content="article">
+    {{ template "_internal/opengraph.html" . }}
+    {{ template "_internal/twitter_cards.html" . }}
 
     <!-- Style -->
     {{ $styles := resources.Get "scss/main.scss" | toCSS | minify | fingerprint }}
