@@ -1,40 +1,40 @@
 <nav class="cover-navigation navigation--Social">
     <ul class="navigation">
   
-    {{ if  .Site.Social.weibo }}
+    {{ if  .Site.Params.social.weibo }}
     <!-- Weibo -->
     <li class="navigation__item">
-      <a href="http://weibo.com/{{ .Site.Social.Weibo}}" title="@{{ .Site.Social.Weibo}} 的微博" target="_blank">
+      <a href="http://weibo.com/{{ .Site.Params.social.weibo}}" title="@{{ .Site.Params.social.weibo}} 的微博" target="_blank">
         <i class='Social fa fa-weibo'></i>
         <span class="label">Weibo</span>
       </a>
     </li>
     {{ end }}
   
-    {{ if  .Site.Social.github }}
+    {{ if  .Site.Params.social.github }}
     <!-- Github -->
     <li class="navigation__item">
-      <a href="https://github.com/{{ .Site.Social.Github}}" title="@{{ .Site.Social.Github}} 的 Github" target="_blank">
+      <a href="https://github.com/{{ .Site.Params.social.github}}" title="@{{ .Site.Params.social.github}} 的 Github" target="_blank">
         <i class='Social fa fa-github'></i>
         <span class="label">Github</span>
       </a>
     </li>
     {{ end }}
     
-    {{ if  .Site.Social.twitter }}
+    {{ if  .Site.Params.social.twitter }}
     <!-- Twitter -->
     <li class="navigation__item">
-      <a href="http://twitter.com/{{ .Site.Social.Twitter}}" title="@{{ .Site.Social.Twitter}}" target="_blank">
+      <a href="http://twitter.com/{{ .Site.Params.social.twitter}}" title="@{{ .Site.Params.social.twitter}}" target="_blank">
         <i class='Social fa fa-twitter'></i>
         <span class="label">Twitter</span>
       </a>
     </li>
     {{ end }}
   
-    {{ if  .Site.Social.gplus }}
+    {{ if  .Site.Params.social.gplus }}
     <!-- Google Plus -->
     <li class="navigation__item">
-      <a href="https://plus.google.com/{{ .Site.Social.Gplus}}" rel="author" title="Google+" target="_blank">
+      <a href="https://plus.google.com/{{ .Site.Params.social.gplus}}" rel="author" title="Google+" target="_blank">
         <i class='Social fa fa-google-plus-square'></i>
         <span class="label">Google Plus</span>
       </a>
@@ -49,10 +49,10 @@
       </a>
     </li>
   
-    {{ if  .Site.Social.mail }}
+    {{ if  .Site.Params.social.mail }}
     <!-- Email -->
     <li class="navigation__item">
-      <a href="mailto:{{ .Site.Social.Mail}}" title="Contact me">
+      <a href="mailto:{{ .Site.Params.social.mail}}" title="Contact me">
         <i class='Social fa fa-envelope'></i>
         <span class="label">Email</span>
       </a>

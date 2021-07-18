@@ -1,5 +1,5 @@
 <section class="post-comments">
-    {{ if .Site.Comment.Disqus }}
+    {{ if .Site.params.comment.disqus }}
       <div id="disqus_thread"></div>
       <script>
       
@@ -8,7 +8,7 @@
           this.page.identifier = "{{ .RelPermalink }}";
       };
   
-      var disqus_shortname = '{{ .Site.Comment.Disqus }}';
+      var disqus_shortname = '{{ .Site.params.comment.disqus }}';
       
       (function() { // DON'T EDIT BELOW THIS LINE
           var d = document, s = d.createElement('script');
@@ -19,10 +19,10 @@
       </script>
       <noscript>要查看<a href="http://disqus.com/?ref_noscript"> Disqus </a>评论，请启用 JavaScript</noscript>
       
-    {{ else if .Site.Comment.Duoshuo }}
+    {{ else if .Site.params.comment.duoshuo }}
       <div class="ds-thread" data-thread-key="{{ .RelPermalink }}" data-title="{{ .Title }}" data-url="{{ .URL }}"></div>
       <script type="text/javascript">
-          var duoshuoQuery = {short_name:"{{ .Site.Comment.Duoshuo }}"};
+          var duoshuoQuery = {short_name:"{{ .Site.params.comment.duoshuo }}"};
           (function() {
               var ds = document.createElement('script');
               ds.type = 'text/javascript';ds.async = true;

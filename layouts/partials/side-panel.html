@@ -13,16 +13,16 @@
           <p class="panel-cover__description">{{ .Site.Params.description }}</p>
           <hr class="panel-cover__divider panel-cover__divider--secondary" />
           
-          {{if ( .Site.welcome_Message)}}
-          <p class="panel-cover__description">{{ .Site.welcome_Message }}</p>
+          {{if ( .Site.Params.welcomeMessage)}}
+          <p class="panel-cover__description">{{ .Site.Params.welcomeMessage }}</p>
           {{end}}
           
           <div class="navigation-wrapper">
             <div>
               <nav class="cover-navigation cover-navigation--primary">
                 <ul class="navigation">
-                  <li class="navigation__item"><a href="/#blog" title="{{ .Site.blog_Button.Title }}" class="blog-button">{{ .Site.blog_Button.Title }}</a></li>
-                  {{ range $i, $e := .Site.Nav }}
+                  <li class="navigation__item"><a href="/#blog" title="{{ .Site.Params.blogButton.Title }}" class="blog-button">{{ .Site.Params.blogButton.Title }}</a></li>
+                  {{ range $i, $e := .Site.nav }}
                     <li class="navigation__item"><a href="{{ $e.URL }}" target="_blank" title="{{ $e.Description }}">{{ $e.Title }}</a></li>
                   {{ end }}}}
                 </ul>
@@ -34,8 +34,8 @@
         </div>
       </div>
       
-      {{if ( .Site.cover_Color)}}
-      <div class="panel-cover--overlay cover-{{ .Site.cover_Color }}"></div>
+      {{if ( .Site.Params.coverColor)}}
+      <div class="panel-cover--overlay cover-{{ .Site.Params.coverColor }}"></div>
       {{else}}
       <div class="panel-cover--overlay cover-disabled"></div>
       {{end}}
