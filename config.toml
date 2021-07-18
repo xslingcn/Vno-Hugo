@@ -1,11 +1,7 @@
 # Basic
 title = "Vno Jekyll"
-subtitle = "A blog-orientation theme for Jekyll"
-welcome_message = '<a href="https://github.com/onevcat/vno-jekyll" target="_blank">Download the theme</a>'
-description = "Vno Jekyll is a port of my Ghost theme vno."
-creator = '<a href="http://onev.cat">@onevcat</a>'
-
 baseURL = "http://vno.onevcat.com"
+theme="vno"
 
 #Format
 highlighter = "rouge"
@@ -14,9 +10,23 @@ highlighter = "rouge"
 cover_color = "red"
 
 # Pagination
-plugins = [ "jekyll-paginate" ]
 paginate = 10
 paginate_path = "page/:num/"
+
+[outputFormats]
+  [outputFormats.SearchIndex]
+    isPlainText = true
+    notAlternative = true
+    mediaType = "application/json"
+    path = "/search/"
+
+[outputs]
+  home = ["HTML", "RSS", "SearchIndex"]
+
+[params]
+author = "onevcat"
+subtitle = "A blog-orientation theme for Jekyll"
+description = "Vno Jekyll is a port of my Ghost theme vno."
 
 [permalinks]
 post = "/:year/:month/:title/"
@@ -26,7 +36,7 @@ post = "/:year/:month/:title/"
 title = "Blog"
 description = "Visit blog"
 
-[[nav]]
+[nav]
 title = "Projects"
 description = "My Projects"
 url = "http://project.onevcat.com"
@@ -38,7 +48,7 @@ disqus = "vno-jekyll"
 weibo = "onevcat"
 github = "onevcat"
 twitter = "onevcat"
-gplus = 107_108_267_983_477_360_000
+gplus = "107108267983477358170"
 mail = "onev@onevcat.com"
 
 # Google Analytics
