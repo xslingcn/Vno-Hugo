@@ -1,1 +1,23 @@
-{{ partial "header.html" . }} {{ partial "footer.html" . }}
+<!DOCTYPE html>
+<html>
+
+{{ partial "header.html" . }}
+
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="fa fa-list btn-mobile-menu__icon"></i>
+        <i class="fa fa-angle-up btn-mobile-close__icon hidden"></i>
+    </span> {{ partial "side-panel.html" . }}
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            {{/* {{ content }} */}} {{ partial "footer.html" . }}
+        </div>
+    </div>
+
+    {{ partial "external.html" . }}
+
+</body>
+
+</html>
