@@ -1,0 +1,37 @@
+<section class="post-comments">
+    {{ if .Site.Comment.Disqus }}
+      <div id="disqus_thread"></div>
+      <script>
+      
+      var disqus_config = function () {
+          this.page.url = "{{ .URL }}";
+          this.page.identifier = "{{ .RelPermalink }}";
+      };
+  
+      var disqus_shortname = '{{ .Site.Comment.Disqus }}';
+      
+      (function() { // DON'T EDIT BELOW THIS LINE
+          var d = document, s = d.createElement('script');
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+              (d.head || d.body).appendChild(s);
+          })();
+      </script>
+      <noscript>要查看<a href="http://disqus.com/?ref_noscript"> Disqus </a>评论，请启用 JavaScript</noscript>
+      
+    {{ else if .Site.Comment.Duoshuo }}
+      <div class="ds-thread" data-thread-key="{{ .RelPermalink }}" data-title="{{ .Title }}" data-url="{{ .URL }}"></div>
+      <script type="text/javascript">
+          var duoshuoQuery = {short_name:"{{ .Site.Comment.Duoshuo }}"};
+          (function() {
+              var ds = document.createElement('script');
+              ds.type = 'text/javascript';ds.async = true;
+              ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+              ds.charset = 'UTF-8';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+          })();
+      </script>
+    {{end}}
+    
+  </section>
+  

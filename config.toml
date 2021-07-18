@@ -44,6 +44,7 @@ nav = [
 
 [comment]
 disqus = "vno-jekyll"
+duoshuo = ""
 
 [taxonomies]
   tag = "tags"
