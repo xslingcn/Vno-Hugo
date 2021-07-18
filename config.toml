@@ -1,3 +1,47 @@
-baseURL = "http://example.org/"
-languageCode = "en-us"
-title = "My New Hugo Site"
+# Basic
+title = "Vno Jekyll"
+subtitle = "A blog-orientation theme for Jekyll"
+welcome_message = '<a href="https://github.com/onevcat/vno-jekyll" target="_blank">Download the theme</a>'
+description = "Vno Jekyll is a port of my Ghost theme vno."
+creator = '<a href="http://onev.cat">@onevcat</a>'
+
+baseURL = "http://vno.onevcat.com"
+
+#Format
+highlighter = "rouge"
+
+# supported colors: blue, green, purple, red, orange or slate. If you need clear, leave it empty.
+cover_color = "red"
+
+# Pagination
+plugins = [ "jekyll-paginate" ]
+paginate = 10
+paginate_path = "page/:num/"
+
+[permalinks]
+post = "/:year/:month/:title/"
+
+# The blog button should not be removed.
+[blog_button]
+title = "Blog"
+description = "Visit blog"
+
+[[nav]]
+title = "Projects"
+description = "My Projects"
+url = "http://project.onevcat.com"
+
+[comment]
+disqus = "vno-jekyll"
+
+[social]
+weibo = "onevcat"
+github = "onevcat"
+twitter = "onevcat"
+gplus = 107_108_267_983_477_360_000
+mail = "onev@onevcat.com"
+
+# Google Analytics
+[ga]
+id = "your_ga_id"
+host = "your_host"
