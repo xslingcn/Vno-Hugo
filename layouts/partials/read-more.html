@@ -2,7 +2,7 @@
     {{ if .Next }}
     <div class="read-more-item">
         <span class="read-more-item-dim">最近的文章</span>
-        <h2 class="post-list__post-title post-title"><a href="{{ .Next.Permalink }}" title="link to {{ .Next.Title }}">{{ .Next.Title }}</a></h2>
+        <h2 class="post-list__post-title post-title"><a href="{{ .Next.URL }}" title="link to {{ .Next.Title }}">{{ .Next.Title }}</a></h2>
         <p class="excerpt">{{ .Next.Summary | truncate 250}}&hellip;</p>
         <div class="post-list__meta">
             <time datetime="{{ .Next.Date.Format "2016-02-16 15:32:24 +0900" }}" class="post-list__meta--date date">{{ .Next.Date.Format "2021-07-19" }}</time> &#8226; 
@@ -12,7 +12,7 @@
                 {{$e}}
                 {{ end }}
             </span>
-            <a class="btn-border-small" href="{{ .Next.Permalink }}">继续阅读</a></div>
+            <a class="btn-border-small" href="{{ .Next.URL }}">继续阅读</a></div>
         </div>
     {{ end }}
 
@@ -20,7 +20,7 @@
     {{ if .Prev }}
     <div class="read-more-item">
         <span class="read-more-item-dim">更早的文章</span>
-        <h2 class="post-list__post-title post-title"><a href="{{ .Prev.Permalink }}" title="link to {{ .Prev.Title }}">{{ .Prev.Title }}</a></h2>
+        <h2 class="post-list__post-title post-title"><a href="{{ .Prev.URL }}" title="link to {{ .Prev.Title }}">{{ .Prev.Title }}</a></h2>
         <p class="excerpt">{{ .Prev.Summary | truncate 250}}&hellip;</p>
         <div class="post-list__meta">
             <time datetime="{{ .Prev.Date.Format "2016-02-16 15:32:24 +0900" }}" class="post-list__meta--date date">{{ .Prev.Date.Format "2021-07-19" }}</time> &#8226; 
@@ -30,7 +30,7 @@
                 {{$e}}
                 {{ end }}
             </span>
-            <a class="btn-border-small" href="{{ .Prev.Permalink }}">继续阅读</a></div>
+            <a class="btn-border-small" href="{{ .Prev.URL }}">继续阅读</a></div>
         </div>
     {{ end }}
  </section>
