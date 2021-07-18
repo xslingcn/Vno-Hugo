@@ -1,23 +1,24 @@
-<!DOCTYPE html>
-<html>
+<div class="main-post-list hidden">
 
-{{ partial "head.html" . }}
+  <ol class="post-list">
+    {{ range $paginator.Pages }}
+    <li>
+      <h2 class="post-list__post-title post-title"><a href="{{ .Permalink }}" title="访问 {{ .Permalink }}">{{ .Permalink }}</a></h2>
+      <p class="excerpt">{{ .Summary | truncate 250 }}&hellip;</p>
+      <div class="post-list__meta">
+          <time datetime="{{ .Next.Date.Format "2016-02-16 15:32:24 +0900" }}" class="post-list__meta--date date">{{ .Next.Date.Format "2021-07-19" }}</time> &#8226; 
+          <span class="post-list__meta--tags tags">
+            {{ range $i, $e := .Params.tags }}
+            {{ if $i }}, {{ end }}
+            {{$e}}
+            {{ end }}
+          </span>
+          <a class="btn-border-small" href={{ .Permalink }}>继续阅读</a></div>
+      <hr class="post-list__divider" />
+    </li>
+    {{ end }}
+  </ol>
 
-<body>
+  {{ partial "pagination.html" . }}
 
-    <span class="mobile btn-mobile-menu">
-        <i class="fa fa-list btn-mobile-menu__icon"></i>
-        <i class="fa fa-angle-up btn-mobile-close__icon hidden"></i>
-    </span> {{ partial "side-panel.html" . }}
-
-    <div class="content-wrapper">
-        <div class="content-wrapper__inner">
-            {{/* {{ content }} */}} {{ partial "footer.html" . }}
-        </div>
-    </div>
-
-    {{ partial "external.html" . }}
-
-</body>
-
-</html>
+</div>
