@@ -31,8 +31,9 @@
 
     <!-- Style -->
     {{ $styles := resources.Get "scss/main.scss" | toCSS | minify | fingerprint }}
-    <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{$styles.Data.Integrity}}" media="screen">
-    <link href="//cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{$styles.Data.Integrity}}" crossorigin="anonymous" media="screen">
+	<link href="//cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
 
     {{ if .Site.Params.useDisqusJS }}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/disqusjs@1.3.0/dist/disqusjs.css" />
