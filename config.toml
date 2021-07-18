@@ -10,11 +10,12 @@ paginatePath = "page"
 [outputs]
   home = ["HTML", "RSS"]
 
-[[menu.main]]
-  name = "Projects"
-  identifier = "projects"
-  url = "http://project.onevcat.com/"
-  weight = 10
+[menu]
+  [[menu.main]]
+    name = "Projects"
+    identifier = "projects"
+    url = "http://project.onevcat.com/"
+    weight = 10
 
 
 [params]
@@ -24,7 +25,7 @@ description = "Vno Hugo is a port of Vno Jekyll."
 welcomeMessage = "Oh What a World"
 
 # supported colors: blue, green, purple, red, orange or slate. If you need clear, leave it empty.
-cover_color = "red"
+coverColor = "red"
 
 [params.comment]
 disqus = "vno-jekyll"
@@ -46,14 +47,6 @@ host = "your_host"
 title = "Blog"
 description = "Visit blog"
 
-[permalinks]
-post = "/:year/:month/:title/"
-
-nav = [
-  #{title = "Projects", description = "My Projects", url = "http://project.onevcat.com"},
-  {title = "Projects", description = "My Projects", url = "http://project.onevcat.com"}
-]
-
 
 [taxonomies]
   tag = "tags"
@@ -61,3 +54,6 @@ nav = [
 [module]
   [[module.imports]]
     path = "github.com/xslingcn/vno-hugo"
+
+[permalinks]
+post = "/:year/:month/:title/"
