@@ -1,0 +1,18 @@
+<article class="post-container post-container--single" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="{{ .Next.Date.Format "2016-02-16 15:32:24 +0900" }}" itemprop="datePublished" class="post-meta__date date">{{ .Next.Date.Format "2021-07-19" }}</time> &#8226; 
+      <span class="post-meta__tags tags">
+        {{ range $i, $e := .Params.tags }}
+        {{ if $i }}, {{ end }}
+        {{$e}}
+        {{ end }}
+      </span>
+    </div>
+    <h1 class="post-title">{{ .Title }}</h1>
+  </header>
+
+  <section class="post">
+    {{ .Content }}
+  </section>
+</article>
