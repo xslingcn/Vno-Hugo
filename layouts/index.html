@@ -1,7 +1,7 @@
 <div class="main-post-list hidden">
 
     <ol class="post-list">
-        {{ range $paginator.Pages }}
+        {{ range .Paginator.Pages }}
         <li>
             <h2 class="post-list__post-title post-title"><a href="{{ .URL }}" title="访问 {{ .URL }}">{{ .URL }}</a></h2>
             <p class="excerpt">{{ .Summary | truncate 250 }}&hellip;</p>

@@ -22,8 +22,8 @@
               <nav class="cover-navigation cover-navigation--primary">
                 <ul class="navigation">
                   <li class="navigation__item"><a href="/#blog" title="{{ .Site.blog_Button.Title }}" class="blog-button">{{ .Site.blog_Button.Title }}</a></li>
-                  {{{{ range $item in .Site.Nav }}
-                    <li class="navigation__item"><a href="{{ $item.URL }}" target="_blank" title="{{ $item.Description }}">{{ $item.Title }}</a></li>
+                  {{ range $i, $e := .Site.Nav }}
+                    <li class="navigation__item"><a href="{{ $e.URL }}" target="_blank" title="{{ $e.Description }}">{{ $e.Title }}</a></li>
                   {{ end }}}}
                 </ul>
               </nav>

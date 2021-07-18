@@ -3,7 +3,7 @@ title = "Vno Hugo"
 baseURL = "http://vno.onevcat.com"
 theme="vno-hugo"
 
-welcome_message = "<a href="https://github.com/xslingcn/vno-hugo" target="_blank">Download the theme</a>"
+welcome_message = "Oh What a World"
 
 #Format
 highlighter = "rouge"
@@ -15,15 +15,8 @@ cover_color = "red"
 paginate = 10
 paginatePath = "page"
 
-[outputFormats]
-  [outputFormats.SearchIndex]
-    isPlainText = true
-    notAlternative = true
-    mediaType = "application/json"
-    path = "/search/"
-
 [outputs]
-  home = ["HTML", "RSS", "SearchIndex"]
+  home = ["HTML", "RSS"]
 
 [params]
 author = "onevcat"
