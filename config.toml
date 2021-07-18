@@ -27,6 +27,7 @@ paginate_path = "page/:num/"
 author = "onevcat"
 subtitle = "A blog-orientation theme for Hugo"
 description = "Vno Hugo is a port of Vno Jekyll."
+welcome_message = "<a href="https://github.com/xslingcn/vno-hugo" target="_blank">Download the theme</a>"
 
 [permalinks]
 post = "/:year/:month/:title/"
@@ -36,13 +37,17 @@ post = "/:year/:month/:title/"
 title = "Blog"
 description = "Visit blog"
 
-[nav]
-title = "Projects"
-description = "My Projects"
-url = "http://project.onevcat.com"
+nav = [
+  #{title = "Projects", description = "My Projects", url = "http://project.onevcat.com"},
+  {title = "Projects", description = "My Projects", url = "http://project.onevcat.com"}
+]
 
 [comment]
 disqus = "vno-jekyll"
+
+[taxonomies]
+  tag = "tags"
+
 
 [social]
 weibo = "onevcat"
