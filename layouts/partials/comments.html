@@ -4,7 +4,7 @@
       <script>
       
       var disqus_config = function () {
-          this.page.url = "{{ .URL }}";
+          this.page.url = "{{ .RelPermalink }}";
           this.page.identifier = "{{ .RelPermalink }}";
       };
   
@@ -20,7 +20,7 @@
       <noscript>要查看<a href="http://disqus.com/?ref_noscript"> Disqus </a>评论，请启用 JavaScript</noscript>
       
     {{ else if .Site.Params.comment.duoshuo }}
-      <div class="ds-thread" data-thread-key="{{ .RelPermalink }}" data-title="{{ .Title }}" data-url="{{ .URL }}"></div>
+      <div class="ds-thread" data-thread-key="{{ .RelPermalink }}" data-title="{{ .Title }}" data-url="{{ .RelPermalink }}"></div>
       <script type="text/javascript">
           var duoshuoQuery = {short_name:"{{ .Site.Params.comment.duoshuo }}"};
           (function() {
