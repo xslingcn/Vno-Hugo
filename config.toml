@@ -1,7 +1,7 @@
 # Basic
-title = "Vno Jekyll"
+title = "Vno Hugo"
 baseURL = "http://vno.onevcat.com"
-theme="vno"
+theme="vno-hugo"
 
 #Format
 highlighter = "rouge"
@@ -25,8 +25,8 @@ paginate_path = "page/:num/"
 
 [params]
 author = "onevcat"
-subtitle = "A blog-orientation theme for Jekyll"
-description = "Vno Jekyll is a port of my Ghost theme vno."
+subtitle = "A blog-orientation theme for Hugo"
+description = "Vno Hugo is a port of Vno Jekyll."
 
 [permalinks]
 post = "/:year/:month/:title/"
