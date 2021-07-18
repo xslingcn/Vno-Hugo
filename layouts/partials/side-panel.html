@@ -13,8 +13,8 @@
           <p class="panel-cover__description">{{ .Site.Params.description }}</p>
           <hr class="panel-cover__divider panel-cover__divider--secondary" />
           
-          {{if ( .Site.Params.welcome_Message)}}
-          <p class="panel-cover__description">{{ .Site.Params.welcome_Message }}</p>
+          {{if ( .Site.welcome_Message)}}
+          <p class="panel-cover__description">{{ .Site.welcome_Message }}</p>
           {{end}}
           
           <div class="navigation-wrapper">

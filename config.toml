@@ -3,6 +3,8 @@ title = "Vno Hugo"
 baseURL = "http://vno.onevcat.com"
 theme="vno-hugo"
 
+welcome_message = "<a href="https://github.com/xslingcn/vno-hugo" target="_blank">Download the theme</a>"
+
 #Format
 highlighter = "rouge"
 
@@ -27,7 +29,6 @@ paginatePath = "page"
 author = "onevcat"
 subtitle = "A blog-orientation theme for Hugo"
 description = "Vno Hugo is a port of Vno Jekyll."
-welcome_message = "<a href="https://github.com/xslingcn/vno-hugo" target="_blank">Download the theme</a>"
 
 [permalinks]
 post = "/:year/:month/:title/"
