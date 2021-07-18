@@ -1,0 +1,44 @@
+<header class="panel-cover {{if or (eq .Params.layout "post") (eq .Params.layout "page")}} panel-cover--collapsed {{end}}" style="background-image: url('/images/background-cover.jpg')">
+    <div class="panel-main">
+  
+      <div class="panel-main__inner panel-inverted">
+      <div class="panel-main__content">
+  
+          <a href="/#blog" title="前往 {{ .Site.Title }} 的主页" class="blog-button"><img src="/assets/images/avatar.jpg" width="80" alt="{{ .Site.Title }} logo" class="panel-cover__logo logo" /></a>
+          <h1 class="panel-cover__title panel-title"><a href="/#blog" title="link to homepage for {{ .Site.Title }}" class="blog-button">{{ .Site.Title }}</a></h1>
+          {{ if (.Site.Params.subTitle) }}
+          <span class="panel-cover__subtitle panel-subtitle">{{ .Site.Params.subTitle }}</span>
+          {{end}}
+          <hr class="panel-cover__divider" />
+          <p class="panel-cover__description">{{ .Site.Params.description }}</p>
+          <hr class="panel-cover__divider panel-cover__divider--secondary" />
+          
+          {{if ( .Site.Params.welcome_Message)}}
+          <p class="panel-cover__description">{{ .Site.Params.welcome_Message }}</p>
+          {{end}}
+          
+          <div class="navigation-wrapper">
+            <div>
+              <nav class="cover-navigation cover-navigation--primary">
+                <ul class="navigation">
+                  <li class="navigation__item"><a href="/#blog" title="{{ .Site.blog_Button.Title }}" class="blog-button">{{ .Site.blog_Button.Title }}</a></li>
+                  {{{{ range $item in .Site.Nav }}
+                    <li class="navigation__item"><a href="{{ .item.URL }}" target="_blank" title="{{ item.Description }}">{{ item.Title }}</a></li>
+                  {{ end }}}}
+                </ul>
+              </nav>
+            </div>
+            
+            <div>{{ partial "social.html" . }}</div>
+          </div>
+        </div>
+      </div>
+      
+      {{if ( .Site.cover_Color)}}
+      <div class="panel-cover--overlay cover-{{ .Site.cover_Color }}"></div>
+      {{else}}
+      <div class="panel-cover--overlay cover-disabled"></div>
+      {{end}}
+    </div>
+  </header>
+  
