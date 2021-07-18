@@ -3,14 +3,6 @@ title = "Vno Hugo"
 baseURL = "http://vno.onevcat.com"
 theme="vno-hugo"
 
-welcome_message = "Oh What a World"
-
-#Format
-highlighter = "rouge"
-
-# supported colors: blue, green, purple, red, orange or slate. If you need clear, leave it empty.
-cover_color = "red"
-
 # Pagination
 paginate = 10
 paginatePath = "page"
@@ -18,40 +10,54 @@ paginatePath = "page"
 [outputs]
   home = ["HTML", "RSS"]
 
+[[menu.main]]
+  name = "Projects"
+  identifier = "projects"
+  url = "http://project.onevcat.com/"
+  weight = 10
+
+
 [params]
 author = "onevcat"
 subtitle = "A blog-orientation theme for Hugo"
 description = "Vno Hugo is a port of Vno Jekyll."
+welcomeMessage = "Oh What a World"
 
-[permalinks]
-post = "/:year/:month/:title/"
+# supported colors: blue, green, purple, red, orange or slate. If you need clear, leave it empty.
+cover_color = "red"
 
-# The blog button should not be removed.
-[blog_button]
-title = "Blog"
-description = "Visit blog"
-
-nav = [
-  #{title = "Projects", description = "My Projects", url = "http://project.onevcat.com"},
-  {title = "Projects", description = "My Projects", url = "http://project.onevcat.com"}
-]
-
-[comment]
+[params.comment]
 disqus = "vno-jekyll"
 duoshuo = ""
 
-[taxonomies]
-  tag = "tags"
-
-
-[social]
+[params.social]
 weibo = "onevcat"
 github = "onevcat"
 twitter = "onevcat"
 gplus = "107108267983477358170"
 mail = "onev@onevcat.com"
 
-# Google Analytics
-[ga]
-id = "your_ga_id"
+[params.ga]
+ID = "your_ga_id"
 host = "your_host"
+
+# The blog button should not be removed.
+[params.blogButton]
+title = "Blog"
+description = "Visit blog"
+
+[permalinks]
+post = "/:year/:month/:title/"
+
+nav = [
+  #{title = "Projects", description = "My Projects", url = "http://project.onevcat.com"},
+  {title = "Projects", description = "My Projects", url = "http://project.onevcat.com"}
+]
+
+
+[taxonomies]
+  tag = "tags"
+
+[module]
+  [[module.imports]]
+    path = "github.com/xslingcn/vno-hugo"
