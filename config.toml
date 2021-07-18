@@ -11,7 +11,7 @@ cover_color = "red"
 
 # Pagination
 paginate = 10
-paginate_path = "page/:num/"
+paginatePath = "page"
 
 [outputFormats]
   [outputFormats.SearchIndex]
