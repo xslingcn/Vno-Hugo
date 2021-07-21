@@ -5,7 +5,7 @@
         <h2 class="post-list__post-title post-title"><a href="{{ .Next.RelPermalink }}" title="link to {{ .Next.Title }}">{{ .Next.Title }}</a></h2>
         <p class="excerpt">{{ .Next.Summary | truncate 250}}&hellip;</p>
         <div class="post-list__meta">
-            <time datetime="{{ .Next.Date.Format "2016-02-16 15:32:24 +0900" }}" class="post-list__meta--date date">{{ .Next.Date.Format "2021-07-19" }}</time> &#8226; 
+            <time datetime="{{ .Date.Format " 2006-01-02 15:04:05 -0700" }}" class="post-list__meta--date date">{{ .Next.Date.Format "2006-01-02" }}</time> &#8226; 
             <span class="post-list__meta--tags tags">
                 {{ range $i, $e := .Next.Params.tags }}
                 {{ if $i }}, {{ end }}
@@ -23,7 +23,7 @@
         <h2 class="post-list__post-title post-title"><a href="{{ .Prev.RelPermalink }}" title="link to {{ .Prev.Title }}">{{ .Prev.Title }}</a></h2>
         <p class="excerpt">{{ .Prev.Summary | truncate 250}}&hellip;</p>
         <div class="post-list__meta">
-            <time datetime="{{ .Prev.Date.Format "2016-02-16 15:32:24 +0900" }}" class="post-list__meta--date date">{{ .Prev.Date.Format "2021-07-19" }}</time> &#8226; 
+            <time datetime="{{ .Date.Format " 2006-01-02 15:04:05 -0700" }}" class="post-list__meta--date date">{{ .Prev.Date.Format "2006-01-02" }}</time> &#8226; 
             <span class="post-list__meta--tags tags">
                 {{ range $i, $e := .Prev.Params.tags }}
                 {{ if $i }}, {{ end }}
