@@ -1,6 +1,6 @@
 # Basic
 title = "Vno Hugo"
-baseURL = "http://vno.onevcat.com"
+baseURL = "https://vno-hugo.netlify.app/"
 theme="vno-hugo"
 
 # Pagination
