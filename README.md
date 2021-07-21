@@ -1,5 +1,6 @@
 # Vno - Hugo
 ![VnoHugo](https://github.com/xslingcn/vno-hugo/blob/main/images/screenshot.png?raw=true)
+![posts](https://github.com/xslingcn/vno-hugo/blob/main/images/posts.png?raw=true)
 
 Vno Hugo is a simple, responsive theme for [Hugo](https://gohugo.io/), it's a port of [onevcat](https://github.com/onevcat)'s [Vno - Jekyll](https://github.com/onevcat/vno-jekyll).
 
