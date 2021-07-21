@@ -9,7 +9,7 @@ See demo [here](https://vno-hugo.netlify.app/).
 ## How to Use
 Inside the folder of your Hugo site run:
 ```bash
-$ git submodule add https://github.com/xslingcn/vno-hugo.git themes/vno-hugo
+git submodule add https://github.com/xslingcn/vno-hugo.git themes/vno-hugo
 ```
 Copy everything in the `exampleSite` folder to the root of your hugo site, then run `hugo serve`. Your site with `Vno Hugo` enabled should be accessible in http://localhost:1313/.
 
