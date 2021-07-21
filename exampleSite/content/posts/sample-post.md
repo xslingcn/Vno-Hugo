@@ -1,6 +1,6 @@
 ---
 layout: post
-tags: ["Say Hi","Hugo"]
+tags: ["Say Hi", "Hugo"]
 title: "Sample Post"
 date: 2021-07-19T07:28:17+08:00
 draft: false
