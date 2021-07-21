@@ -17,7 +17,9 @@ paginatePath = "page"
     url = "http://project.onevcat.com/"
     weight = 10
 
-
+[taxonomies]
+    tag = "tags"
+    
 [params]
 author = "onevcat"
 subtitle = "A blog-orientation theme for Hugo"
@@ -28,7 +30,7 @@ welcomeMessage = "Oh What a World"
 coverColor = "red"
 
 [params.comment]
-disqus = "vno-jekyll"
+disqus = "vno-hugo"
 duoshuo = ""
 
 [params.social]
