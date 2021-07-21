@@ -6,15 +6,13 @@
             <h2 class="post-list__post-title post-title"><a href="{{ .RelPermalink }}" title="访问 {{ .RelPermalink }}">{{ .Title }}</a></h2>
             <p class="excerpt">{{ .Summary | truncate 250 }}&hellip;</p>
             <div class="post-list__meta">
-                <time datetime="{{ .Date.Format " 2016-02-16 15:32:24 +0900 " }}" class="post-list__meta--date date">{{ .Date.Format "2021-07-19" }}</time>
+                <time datetime="{{ .Date.Format " 2006-01-02 15:04:05 -0700 " }}" class="post-list__meta--date date">{{ .Date.Format "2006-01-02" }}</time>
                 {{with .Params.tags}} <span class="post-list__meta--tags tags">&#8226;{{ delimit . "&nbsp&nbsp&#8226&nbsp" }}</span> {{end}}
                 <a class="btn-border-small" href={{ .RelPermalink }}>继续阅读</a></div>
             <hr class="post-list__divider" />
         </li>
         {{ end }}
     </ol>
-
     {{ partial "pagination.html" . }}
-
 </div>
 {{ end }}
