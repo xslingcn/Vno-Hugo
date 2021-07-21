@@ -1,7 +1,9 @@
 # Vno - Hugo
+![VnoHugo](https://github.com/xslingcn/vno-hugo/blob/master/images/screenshot.png?raw=true)
 Vno Hugo is a theme for [Hugo](https://gohugo.io/), it's a port of [onevcat](https://github.com/onevcat)'s [Vno - Jekyll](https://github.com/onevcat/vno-jekyll).
 
 See demo [here](https://vno-hugo.netlify.app/).
+
 ## How to Use
 Inside the folder of your Hugo site run:
 ```bash
