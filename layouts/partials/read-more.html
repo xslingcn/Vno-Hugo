@@ -6,12 +6,7 @@
         <p class="excerpt">{{ .Next.Summary | truncate 250}}&hellip;</p>
         <div class="post-list__meta">
             <time datetime="{{ .Date.Format " 2006-01-02 15:04:05 -0700" }}" class="post-list__meta--date date">{{ .Next.Date.Format "2006-01-02" }}</time> &#8226; 
-            <span class="post-list__meta--tags tags">
-                {{ range $i, $e := .Next.Params.tags }}
-                {{ if $i }}, {{ end }}
-                {{$e}}
-                {{ end }}
-            </span>
+            {{with .Next.Params.tags}} <span class="post-list__meta--tags tags">&#8226;{{ delimit . "&nbsp&nbsp&#8226&nbsp" }}</span> {{end}}
             <a class="btn-border-small" href="{{ .Next.RelPermalink }}">继续阅读</a></div>
         </div>
     {{ end }}
@@ -23,13 +18,8 @@
         <h2 class="post-list__post-title post-title"><a href="{{ .Prev.RelPermalink }}" title="link to {{ .Prev.Title }}">{{ .Prev.Title }}</a></h2>
         <p class="excerpt">{{ .Prev.Summary | truncate 250}}&hellip;</p>
         <div class="post-list__meta">
-            <time datetime="{{ .Date.Format " 2006-01-02 15:04:05 -0700" }}" class="post-list__meta--date date">{{ .Prev.Date.Format "2006-01-02" }}</time> &#8226; 
-            <span class="post-list__meta--tags tags">
-                {{ range $i, $e := .Prev.Params.tags }}
-                {{ if $i }}, {{ end }}
-                {{$e}}
-                {{ end }}
-            </span>
+            <time datetime="{{ .Date.Format " 2006-01-02 15:04:05 -0700" }}" class="post-list__meta--date date">{{ .Prev.Date.Format "2006-01-02" }}</time>
+            {{with .Prev.Params.tags}} <span class="post-list__meta--tags tags">&#8226;{{ delimit . "&nbsp&nbsp&#8226&nbsp" }}</span> {{end}}
             <a class="btn-border-small" href="{{ .Prev.RelPermalink }}">继续阅读</a></div>
         </div>
     {{ end }}
