@@ -33,6 +33,13 @@ coverColor = "red"
 disqus = "vno-hugo"
 duoshuo = ""
 
+# Take a look on https://github.com/gitalk/gitalk#usage for more info.
+[params.comment.gitalk]
+ID = ""
+secret = ""
+repo = ""
+owner = ""
+
 [params.social]
 weibo = "onevcat"
 github = "onevcat"
