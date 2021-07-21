@@ -9,7 +9,7 @@ You’ll find this post in your `posts` directory. Go ahead and edit it and re-b
 
 To add new posts, simply run:
 ```bash
-$ hugo new posts my-sample-post
+$ hugo new posts/my-sample-post.md
 ```
 And you shall see the my-sample-post.md file in `posts` directory, just edit the front matter and content as you like. Take a look at the source for this post to get an idea about how it works.
 
