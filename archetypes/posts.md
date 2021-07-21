@@ -1,6 +1,6 @@
 ---
 layout: post
-tags: ["Sai Hi","Vno"]
+tags: ["Say Hi","Vno"]
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
 draft: true
