@@ -49,13 +49,5 @@ host = "your_host"
 title = "Blog"
 description = "Visit blog"
 
-
-[taxonomies]
-  tag = "tags"
-
-[module]
-  [[module.imports]]
-    path = "github.com/xslingcn/vno-hugo"
-
 [permalinks]
 post = "/:year/:month/:title/"
