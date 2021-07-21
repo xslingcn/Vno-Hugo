@@ -15,11 +15,11 @@ Copy everything in the `exampleSite` folder to the root of your hugo site, then 
 
 For more information about Hugo, please visit [Hugo's site](https://gohugo.io).
 
-#### Configuration
+## Configuration
 
 All configuration could be done in `config.yml`. Remember you need to restart to serve the page when after changing the config file. Everything in the config file should be self-explanatory.
 
-#### Background image and avatar
+## Background image and avatar
 
 You could replace the background and avatar image in `static/images` folder to change them.
 ## Licence
