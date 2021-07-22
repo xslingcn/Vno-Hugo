@@ -5,7 +5,7 @@
         <h2 class="post-list__post-title post-title"><a href="{{ .Next.RelPermalink }}" title="link to {{ .Next.Title }}">{{ .Next.Title }}</a></h2>
         <p class="excerpt">{{ .Next.Summary | truncate 250}}&hellip;</p>
         <div class="post-list__meta">
-            <time datetime="{{ .Date.Format " 2006-01-02 15:04:05 -0700" }}" class="post-list__meta--date date">{{ .Next.Date.Format "2006-01-02" }}</time> &#8226; 
+            <time datetime="{{ .Date.Format " 2006-01-02 15:04:05 -0700" }}" class="post-list__meta--date date">{{ .Next.Date.Format "2006-01-02" }}</time>
             {{with .Next.Params.tags}} <span class="post-list__meta--tags tags">• {{ delimit . "  • " }}</span> {{end}}
             <a class="btn-border-small" href="{{ .Next.RelPermalink }}">继续阅读</a></div>
         </div>
