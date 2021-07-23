@@ -199,3 +199,82 @@
   }
 
 }
+
+// ------------------------------
+// Dark Mode
+// ------------------------------
+@media (prefers-color-scheme: dark) {
+  body {
+      background-color: $primary-color-dark;
+      color: $secondary-color-dark;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+      color: $secondary-color-dark;
+  }
+  a{
+    color: darken($primary-color,10%);
+  }
+  a:hover {
+      color: darken($secondary-color,10%);
+  }
+  .post-list__post-title a {
+      color: $secondary-color-dark;
+  }
+  .post-list__post-title a:hover {
+      color: darken($secondary-color,10%);
+  }
+  .post-list__divider {
+      border-top: 1px solid #373E47;
+  }
+  table {
+      color: $primary-color-dark;
+      border: 2px solid #444c56;
+  }
+  table thead tr:first-child {
+      background-color: #444c56;
+      color: $secondary-color-dark;
+  }
+  table thead tr:last-child th {
+      border-bottom: 1px solid #444c56;
+  }
+  table tbody td {
+      border-bottom: 1px solid #444c56;
+  }
+  summary {
+      background: #4d4d4d;
+      color: $secondary-color-dark;
+  }
+  details {
+      background: $primary-color-dark;
+  }
+  details[open] summary {
+      background: $primary-color-dark;
+      color: $secondary-color-dark;
+  }
+  details p {
+      color: $secondary-color-dark;
+  }
+  code {
+      background: #2D333B;
+  }
+  pre {
+      background: #2D333B;
+      border: none;
+  }
+  .highlight .n {
+      color: #373E47;
+  }
+  .highlight .nv {
+      color: #373E47;
+  }
+  .highlight .p {
+      color: gray;
+  }
+  .read-more-item-dim {
+      color: darken($primary-color,10%);
+  }
+}
