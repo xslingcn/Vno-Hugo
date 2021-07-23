@@ -19,14 +19,6 @@ body {
   text-align: justify;
 }
 
-::selection {
-  background: lighten($primary-color, 36%);
-}
-
-::-moz-selection {
-  background: lighten($primary-color, 36%);
-}
-
 // ------------------------------
 // TYPOGRAPHY
 // ------------------------------
