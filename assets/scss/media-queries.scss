@@ -219,13 +219,13 @@
     color: darken($primary-color,10%);
   }
   a:hover {
-      color: darken($secondary-color,10%);
+      color: $primary-color;
   }
   .post-list__post-title a {
       color: $secondary-color-dark;
   }
   .post-list__post-title a:hover {
-      color: darken($secondary-color,10%);
+      color: $primary-color;
   }
   .post-list__divider {
       border-top: 1px solid #373E47;
@@ -276,5 +276,83 @@
   }
   .read-more-item-dim {
       color: darken($primary-color,10%);
+  }
+  textarea{
+    color: $secondary-color-dark;
+  }
+  .markdown-body {
+    color: $secondary-color-dark;
+  }
+  .gt-container a {
+      color: darken($primary-color,10%);
+  }
+  .gt-container a:hover {
+      color: $primary-color;
+      border-color: $primary-color;
+  }
+  .gt-container a.is--active{
+      color: $secondary-color-dark;
+  }
+  .gt-container a.is--active:hover{
+      color: $secondary-color-dark;
+  }
+  .gt-container .gt-header-textarea {
+      background-color: #1C2128;
+  }
+  .gt-container .gt-header-textarea:hover {
+      background-color: lighten(#1C2128, 20%);
+  }
+  .gt-container .gt-header-preview {
+    border: 1px solid rgba(205,217,229,0.1);
+    background-color: #1C2128;
+  }
+  .gt-container .gt-svg svg{
+    fill: $secondary-color-dark;
+  }
+  .gt-container .gt-user .gt-ico svg {
+      fill: $secondary-color-dark;
+  }
+  .gt-container .gt-no-init a{
+    color: darken($primary-color,10%);
+  }
+  .gt-container .gt-no-init a:hover{
+    color: $primary-color;
+  }
+  .gt-container .gt-link{
+      border-bottom: 1px dotted $primary-color-dark;
+      color: darken($primary-color,10%);
+  }
+  .gt-container .gt-link:hover{
+      color: $primary-color;
+  }
+  .gt-container .gt-popup{
+      background: $primary-color-dark;
+      border: 1px solid rgba(205,217,229,0.1);
+  }
+  .gt-container .gt-btn {
+      border: 1px solid rgba(205,217,229,0.1);
+      background-color: #347d39;
+      color: #FFF;
+  }
+  .gt-container .gt-btn:hover{
+      color: #FFF;
+      background-color: #347d39;
+      border: 1px solid rgba(205,217,229,0.1);
+  }
+  .gt-container .gt-btn-preview{
+    background-color: #1C2128;
+    color: $secondary-color-dark;
+    border-color: 1px solid rgba(205,217,229,0.1);
+  }
+  .gt-container .gt-btn-preview:hover{
+    background-color: #22272E;
+    color: $secondary-color-dark;
+    border: 1px solid #768390;
+  }
+  .gt-container .gt-header-controls-tip {
+    color: darken($primary-color,10%);
+  }
+  .gt-container .gt-header-controls-tip:hover{
+    color: $primary-color;
   }
 }
