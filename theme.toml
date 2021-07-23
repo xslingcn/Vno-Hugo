@@ -1,10 +1,10 @@
 name = "Vno Hugo"
 license = "CC BY-NC-SA 4.0"
 licenselink = "https://creativecommons.org/licenses/by-nc-sa/4.0/"
-description = "Vno Hugo is a port of Vno Jekyll."
+description = "A Simple and Responsive blog theme for Hugo."
 homepage = "https://github.com/xslingcn/vno-hugo"
 tags = ["blog", "responsive"]
-features = ["blog", "responsive"]
+features = ["blog", "responsive", "dark", "light"]
 min_version = "0.54.0"
 
 # If the theme has a single author
