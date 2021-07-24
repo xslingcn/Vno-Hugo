@@ -1,10 +1,11 @@
-name = "Vno Hugo"
+name = "Vno"
 license = "CC BY-NC-SA 4.0"
 licenselink = "https://creativecommons.org/licenses/by-nc-sa/4.0/"
 description = "A Simple and Responsive blog theme for Hugo."
 homepage = "https://github.com/xslingcn/vno-hugo"
-tags = ["blog", "responsive"]
-features = ["blog", "responsive", "dark", "light"]
+demosite = "https://vno-hugo.netlify.app/"
+tags = ["blog", "responsive","dark", "light"]
+features = ["blog", "responsive", "darkmode", "pagination", "social-menu"]
 min_version = "0.54.0"
 
 # If the theme has a single author

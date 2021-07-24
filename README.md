@@ -17,7 +17,9 @@ For more information about Hugo, please visit [Hugo's site](https://gohugo.io).
 
 ## Configuration
 
-All configuration could be done in `config.yml`. Remember you need to restart to serve the page when after changing the config file. Everything in the config file should be self-explanatory.
+All configuration could be done in `config.yml`. Everything in the config file should be self-explanatory.
+
+If you want to enable MathJax support, set `math` param in the front matter to `true`.
 
 ## Background image and avatar
 
