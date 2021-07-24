@@ -13,6 +13,9 @@ h4,
 h5 {
     color: $secondary-color-dark;
 }
+
+.post hr {border-bottom: 3px solid #373e47;}
+
 a{
   color: darken($primary-color,10%);
 }
@@ -29,7 +32,7 @@ a:hover {
     border-top: 1px solid #373E47;
 }
 table {
-    color: $primary-color-dark;
+    color: $secondary-color-dark;
     border: 2px solid #444c56;
 }
 table thead tr:first-child {
@@ -39,6 +42,11 @@ table thead tr:first-child {
 table thead tr:last-child th {
     border-bottom: 1px solid #444c56;
 }
+table tr{
+    &:nth-child(2n){
+        background-color: #2d333b;
+    }
+} 
 table tbody td {
     border-bottom: 1px solid #444c56;
 }
@@ -56,8 +64,8 @@ details[open] summary {
 details p {
     color: $secondary-color-dark;
 }
-code {
-    background: #2D333B;
+code{
+    background-color: rgba(99,110,123,0.4);
 }
 pre {
     background: #2D333B;
@@ -77,6 +85,10 @@ pre {
 }
 textarea{
   color: $secondary-color-dark;
+}
+blockquote{
+    color: #768390;
+    border-left: 0.25em solid #444C56;
 }
 
 // ------------------------------

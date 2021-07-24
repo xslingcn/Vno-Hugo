@@ -1,104 +1,147 @@
 .markdown-body {
+  color: $secondary-color-dark;
+  .pl-md,.pl-mi1,.pl-mc,img,pre,.highlight pre{
+    background-color: $primary-color-dark;
+  }
+  table {
+    display: block;
+    width: 100%; 
+    width: max-content;
+    max-width: 100%;
+    overflow: auto;
     color: $secondary-color-dark;
-    .pl-md,.pl-mi1,.pl-mc,hr,table tr,table tr:nth-child(2n),img,code,pre{
+    th,
+    td {
+      padding: 6px 13px;
+      border: 1px solid #444C56;
+    }
+    tr {
       background-color: $primary-color-dark;
+      border-top: 1px solid #373e47;
+      &:nth-child(2n) {
+        background-color: #2d333b;
+      }
     }
-    hr,table td{
-      border-bottom: 1px solid #444C56;
-    }
-    h1,h2,table tr{
-      border-bottom: 1px solid #373e47;
-    }
-    h6{
-      color: lighten($secondary-color-dark, 5%)
-    }
-    blockquote{
-      color: lighten($secondary-color-dark, 5%);
-      border-left: 0.25em solid #444C56;
-    }
-    kbd{
-      background-color: #2D333B;
-      border-bottom-color: rgba(99,110,123,0.4);
-      border: 1px solid rgba(99,110,123,0.4);
-      box-shadow: inset 0 -1px 0 rgba(99,110,123,0.4);
-      -webkit-box-shadow: inset 0 -1px 0 rgba(99,110,123,0.4);
-      color: $secondary-color-dark;
-    }
-    :checked+.radio-label{
-      border-color: #99C8FF;
+    img {
+      background-color: transparent;
     }
   }
-  .gt-container{
-    a {
-      color: darken($primary-color,10%);
-    }
-    a:hover {
-      color: $primary-color;
-      border-color: $primary-color;
-    }
-    a.is--active{
-      color: $secondary-color-dark;
-    }
-    a.is--active:hover{
-      color: $secondary-color-dark;
-    }
-    .gt-header-textarea {
-      background-color: #1C2128;
-    }
-    .gt-header-textarea:hover {
-      background-color: lighten(#1C2128, 20%);
-    }
-    .gt-header-preview {
-      border: 1px solid rgba(205,217,229,0.1);
-      background-color: #1C2128;
-    }
-    .gt-svg svg{
-      fill: $secondary-color-dark;
-    }
-    .gt-user .gt-ico svg {
-      fill: $secondary-color-dark;
-    }
-    .gt-no-init a{
-      color: darken($primary-color,10%);
-    }
-    .gt-no-init a:hover{
-      color: $primary-color;
-    }
-    .gt-link{
-      border-bottom: 1px dotted $primary-color-dark;
-      color: darken($primary-color,10%);
-    }
-    .gt-link:hover{
-      color: $primary-color;
-    }
-    .gt-popup{
-      background: $primary-color-dark;
-      border: 1px solid rgba(205,217,229,0.1);
-    }
-    .gt-btn {
-      border: 1px solid rgba(205,217,229,0.1);
-      background-color: #347d39;
-      color: #FFF;
-    }
-    .gt-btn:hover{
-      color: #FFF;
-      background-color: #347d39;
-      border: 1px solid rgba(205,217,229,0.1);
-    }
-    .gt-btn-preview{
-      background-color: #1C2128;
-      color: $secondary-color-dark;
-      border-color: 1px solid rgba(205,217,229,0.1);
-    }
-    .gt-btn-preview:hover{
-      background-color: #22272E;
-      color: $secondary-color-dark;
-      border: 1px solid #768390;
-    }
-    .gt-header-controls-tip {
-      color: darken($primary-color,10%);
-    }
-    .gt-header-controls-tip:hover{
-      color: $primary-color;
-    }
+  hr,h1,h2,table tr{
+    border-bottom: 1px solid #373e47;
   }
+  hr{
+    background-color: #444c56;
+  }
+  h6{
+    color: #768390;
+  }
+  blockquote{
+    color: #768390;
+    border-left: 0.25em solid #444C56;
+  }
+  code{
+    background-color: rgba(99,110,123,0.4);
+    border-radius: 6px;
+    border: 0;
+    padding: .2em .4em;
+  }
+  kbd{
+    background-color: #2D333B;
+    border-bottom-color: rgba(99,110,123,0.4);
+    border: 1px solid rgba(99,110,123,0.4);
+    box-shadow: inset 0 -1px 0 rgba(99,110,123,0.4);
+    -webkit-box-shadow: inset 0 -1px 0 rgba(99,110,123,0.4);
+    color: $secondary-color-dark;
+  }
+  :checked+.radio-label{
+    border-color: #99C8FF;
+  }
+}
+.gt-container{
+  a {
+    color: darken($primary-color,10%);
+  }
+  a:hover {
+    color: $primary-color;
+    border-color: $primary-color;
+  }
+  a.is--active{
+    color: $secondary-color-dark;
+  }
+  a.is--active:hover{
+    color: $secondary-color-dark;
+  }
+  .gt-header-textarea {
+    background-color: #1C2128;
+  }
+  .gt-header-textarea:hover {
+    background-color: #2D333B;
+  }
+  .gt-header-preview {
+    border: 1px solid rgba(205,217,229,0.1);
+    background-color: #1C2128;
+  }
+  .gt-svg svg{
+    fill: $secondary-color-dark;
+  }
+  .gt-user .gt-ico svg {
+    fill: $secondary-color-dark;
+  }
+  .gt-no-init a{
+    color: darken($primary-color,10%);
+  }
+  .gt-no-init a:hover{
+    color: $primary-color;
+  }
+  .gt-link{
+    border-bottom: 1px dotted $primary-color-dark;
+    color: darken($primary-color,10%);
+  }
+  .gt-link:hover{
+    color: $primary-color;
+  }
+  .gt-popup{
+    background: $primary-color-dark;
+    border: 1px solid rgba(205,217,229,0.1);
+  }
+  .gt-btn {
+    border: 1px solid rgba(205,217,229,0.1);
+    background-color: #347d39;
+    color: #FFF;
+  }
+  .gt-btn:hover{
+    color: #FFF;
+    background-color: #46954a;
+    border: 1px solid rgba(205,217,229,0.1);
+  }
+  .gt-btn-preview{
+    background-color: #1C2128;
+    color: $secondary-color-dark;
+    border-color: 1px solid rgba(205,217,229,0.1);
+  }
+  .gt-btn-preview:hover{
+    background-color: #22272E;
+    color: $secondary-color-dark;
+    border: 1px solid #768390;
+  }
+  .gt-header-controls-tip {
+    color: darken($primary-color,10%);
+  }
+  .gt-header-controls-tip:hover{
+    color: $primary-color;
+  }
+  .gt-comment-username{
+    color: darken($primary-color,10%);
+  }
+  .gt-comment-admin .gt-comment-content{
+    background-color: #22272E;
+    border: 1px solid #2E4C77;
+  }
+  .gt-comment-content:hover {
+    -webkit-box-shadow: 0 0.625em 3.75em 0 #373e48;
+            box-shadow: 0 0.625em 3.75em 0 #373e48;
+  }
+  .gt-comment-body {
+    color: $secondary-color-dark !important;
+  }
+}
