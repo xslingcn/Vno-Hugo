@@ -1,7 +1,7 @@
 # Basic
 title = "Vno Hugo"
 baseURL = "https://vno-hugo.netlify.app/"
-theme="Vno Hugo"
+theme = "Vno Hugo"
 
 # Pagination
 paginate = 10
