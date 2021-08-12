@@ -1,4 +1,4 @@
-<header class="panel-cover {{if or (eq .Params.layout "post") (eq .Params.layout "page")}} panel-cover--collapsed {{end}}" style="background-image: url('/images/background-cover.jpg')">
+<header class=" {{ if .IsHome }} panel-cover {{ else }} panel-cover panel-cover--collapsed {{ end }}" style="background-image: url('{{ .Site.Params.cdnUrl }}/images/background-cover.jpg')">
     <div class="panel-main">
   
       <div class="panel-main__inner panel-inverted">

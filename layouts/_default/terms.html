@@ -1,0 +1,23 @@
+{{ define "main" }}
+<h1>标签</h1>
+{{ $data := .Data }}
+{{ range .Data.Terms.ByCount }}
+{{ $termLink := printf "/%s/%s/" $data.Plural .Term | urlize }}
+<a class="btn-border-small" href="{{ $termLink }}" title="{{ .Term }}">{{ .Term }}</a>&nbsp;
+{{ end }}
+<br><br><br>
+{{ range .Data.Terms.ByCount }}
+{{ $termLink := printf "/%s/%s/" $data.Plural .Term | urlize }}
+<ul>
+    <li style="list-style-type:none;" class="listing-seperator" id="{ .Term }}"><span style="font-size:1.4em"><a href="{{ $termLink }}">{{ .Term }}</a> 共{{ .Count }}篇</span></li>
+    <ul>
+        {{ range .Pages | first 5 }}
+        <li>{{ .Date.Format "2006-01-02" }} <a href="{{ .Permalink }}">{{ .Title }}</a></li>
+        {{ end }}
+        {{ if gt (len .Pages) 5 }}
+        <li><a href="{{ $termLink }}">……</a></li>
+        {{ end }}
+    </ul>
+</ul>
+{{ end }}
+{{ end }}
