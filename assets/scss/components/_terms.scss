@@ -1,0 +1,42 @@
+// ------------------------------
+// Terms
+// ------------------------------
+ .terms-list{
+     margin-top: 30px;
+    margin-bottom: 50px;
+ }
+
+ .terms-ul{
+     margin-left: 8px;
+     margin-bottom: 15px;
+ }
+
+ .terms-listing-seperator{
+    list-style-type:none;
+
+ }
+
+.term-link{
+    font-size: 150%;
+ }
+
+.term-count{
+    font-size: 60%;
+    color: $gray-dark;
+    top: -8px;
+    position: relative;
+    margin-right: 10px;
+ }
+
+.term-enum{
+    color: $gray-dark;
+    list-style-type:none;
+    font-size: 110%;
+    margin-bottom: 6px;  
+ }
+
+.term-title{
+    font-size: 110%;
+    margin-bottom: 6px;  
+    margin-left: 10px;
+ }
