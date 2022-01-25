@@ -6,7 +6,7 @@
         {{ range .Data.Terms.ByCount }}
         {{ $termLink := printf "/%s/%s/" $data.Plural .Term | urlize }}
         <a  class="btn-border-tags" href="{{ $termLink }}" title="{{ .Term }}">
-            <i class="fa fa-tags">
+            <i style="margin-bottom: 15px;" class="fa fa-tags">
               {{ .Term }}
          </i>
         </a>
@@ -30,7 +30,7 @@
                 </li>
                 {{ end }}
                 {{ if gt (len .Pages) 5 }}
-                    <li ><a href="{{ $termLink }}">……</a></li>
+                    <a href="{{ $termLink }}">……</a>
                 {{ end }}
             </ul>
         </ul>
