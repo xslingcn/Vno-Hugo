@@ -21,6 +21,7 @@ $(document).ready(function() {
 
   if (window.location.pathname.substring(0, 6) == "/tags/") {
     $(".panel-cover").addClass("panel-cover--collapsed");
+    $(".main-post-list").removeClass("hidden");
   }
 
   if (window.location.pathname.substring(0, 6) == "/page/") {
