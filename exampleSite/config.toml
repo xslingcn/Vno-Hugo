@@ -50,6 +50,7 @@ github = "onevcat"
 twitter = "onevcat"
 gplus = "107108267983477358170"
 mail = "onev@onevcat.com"
+linkedin = "example"
 
 [params.ga]
 ID = "your_ga_id"
