@@ -1,13 +1,13 @@
 <section class="read-more">
     {{ if .Next }}
     <div class="read-more-item">
-        <span class="read-more-item-dim">最近的文章</span>
+        <span class="read-more-item-dim">{{ T "recent" }}</span>
         <h2 class="post-list__post-title post-title"><a href="{{ .Next.RelPermalink }}" title="link to {{ .Next.Title }}">{{ .Next.Title }}</a></h2>
         <p class="excerpt">{{ .Next.Summary | truncate 250}}&hellip;</p>
         <div class="post-list__meta">
             <time datetime="{{ .Date.Format " 2006-01-02 15:04:05 -0700" }}" class="post-list__meta--date date">{{ .Next.Date.Format "2006-01-02" }}</time>
             {{ with .Next.Params.tags }} <span class="post-list__meta--tags tags"> {{ range . }}  • <a href="{{ "tags" | absURL }}/{{ . | urlize }}">{{ . }}</a> {{ end }} </span> {{ end }}
-            <a class="btn-border-small" href="{{ .Next.RelPermalink }}">继续阅读</a>
+            <a class="btn-border-small" href="{{ .Next.RelPermalink }}">{{ T "continue" }}</a>
         </div>
     </div>
     {{ end }}
@@ -15,7 +15,7 @@
 
     {{ if .Prev }}
     <div class="read-more-item">
-        <span class="read-more-item-dim">更早的文章</span>
+        <span class="read-more-item-dim">{{ T "earlier" }}</span>
         <h2 class="post-list__post-title post-title"><a href="{{ .Prev.RelPermalink }}" title="link to {{ .Prev.Title }}">{{ .Prev.Title }}</a></h2>
         <p class="excerpt">{{ .Prev.Summary | truncate 250}}&hellip;</p>
         <div class="post-list__meta">
@@ -25,7 +25,7 @@
                 {{ range . }}  • <a href="{{ "tags" | absURL }}/{{ . | urlize }}">{{ . }}</a> {{ end }} 
             </span>
             {{ end }}
-            <a class="btn-border-small" href="{{ .Prev.RelPermalink }}">继续阅读</a>
+            <a class="btn-border-small" href="{{ .Prev.RelPermalink }}">{{ T "continue" }}</a>
         </div>
     </div>
     {{ end }}

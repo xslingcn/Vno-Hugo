@@ -1,0 +1,14 @@
+[continue]
+  other = '继续阅读'
+
+[earlier]
+  other = '更早的文章'
+
+[recent]
+  other = '最近的文章'
+
+[license]
+  other = '本站点内容基于 <a href="{{ .Site.Params.copyright.license_link }}">{{ .Site.Params.copyright.license  }}</a> 协议发布。'
+
+[poweredBy]
+  other = '由 <a href="https://gohugo.io/">Hugo</a> 于 {{ . }} 生成， 采用 <a href="https://github.com/xslingcn/vno-hugo"> Vno - Hugo</a> 作为主题。'

@@ -3,12 +3,12 @@
     <ol class="post-list">
         {{ range .Paginator.Pages }}
         <li>
-            <h2 class="post-list__post-title post-title"><a href="{{ .RelPermalink }}" title="访问 {{ .RelPermalink }}">{{ .Title }}</a></h2>
+            <h2 class="post-list__post-title post-title"><a href="{{ .RelPermalink }}" title="To {{ .RelPermalink }}">{{ .Title }}</a></h2>
             <p class="excerpt">{{ .Summary | truncate 250 }}&hellip;</p>
             <div class="post-list__meta">
                 <time datetime="{{ .Date.Format " 2006-01-02 15:04:05 -0700 " }}" class="post-list__meta--date date">{{ .Date.Format "2006-01-02" }}</time>
                 {{ with .Params.tags }} <span class="post-list__meta--tags tags"> {{ range . }}  • <a href="{{ "tags" | absURL }}/{{ . | urlize }}">{{ . }}</a> {{ end }} </span> {{ end }}
-                <a class="btn-border-small" href={{ .RelPermalink }}>继续阅读</a></div>
+                <a class="btn-border-small" href={{ .RelPermalink }}>{{ T "continue" }}</a></div>
             <hr class="post-list__divider" />
         </li>
         {{ end }}

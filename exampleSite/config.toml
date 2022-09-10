@@ -3,6 +3,17 @@ title = "Vno Hugo"
 baseURL = "https://vno-hugo.netlify.app/"
 theme = "vno-hugo"
 
+# supported languages: en-us, zh-cn (lowercase language codes only)
+defaultContentLanguage = 'en-us'
+# here lists available languages, if you wish to add your own custom translation, please refer to https://gohugo.io/content-management/multilingual
+[languages]
+  [languages.en-us]
+    languageName = 'English(United States)'
+    weight = 10
+  [languages.zh-cn]
+    languageName = '简体中文（中国大陆）'
+    weight = 20
+
 # Pagination
 paginate = 10
 paginatePath = "page"
@@ -60,6 +71,10 @@ host = "your_host"
 [params.blogButton]
 title = "Blog"
 description = "Visit blog"
+
+[params.copyright]
+license = 'CC BY-NC-SA 4.0'
+license_link = 'http://creativecommons.org/licenses/by-nc-sa/4.0/'
 
 [permalinks]
 posts = "/:year/:month/:title/"
